@@ -10,6 +10,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
+import sample.Model.FXMLClass;
 import sample.Tool.Database;
 
 import java.sql.ResultSet;
@@ -26,6 +27,7 @@ public class LogonController {
     private ImageView background, words;
 
     private Scene adminScene, readerScene;
+    private FXMLClass searchView;
     private Stage stage;
 
 
@@ -39,7 +41,7 @@ public class LogonController {
             System.out.println(reader.getString("reader_id"));
             System.out.println(reader.getString("password"));
             if(reader.getString("reader_id").equals(usernameTextField.getText()) && reader.getString("password").equals(passwdTextField.getText()) ){
-                System.out.println("sss");
+                searchView.getFxmlLoader().<SearchController>getController().setReader_id(usernameTextField.getText());
                 stage.setScene(readerScene);
                 readerDatebase.close();
                 return;
@@ -97,5 +99,13 @@ public class LogonController {
 
     public void setStage(Stage stage) {
         this.stage = stage;
+    }
+
+    public FXMLClass getSearchView() {
+        return searchView;
+    }
+
+    public void setSearchView(FXMLClass searchView) {
+        this.searchView = searchView;
     }
 }

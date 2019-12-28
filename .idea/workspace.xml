@@ -1,45 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/sample/Controller/AddBookController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/Controller/AddBorrowController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/Controller/AddReturnController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/Controller/ChangeBookController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/View/Admin/AddBookView.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/View/Admin/AddBorrowView.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/View/Admin/AddReturnView.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/View/Admin/changeBookView.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/View/Admin/changeReaderView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="登陆界面功能完成">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/CurriculumDesign/sample/Controller/LogonController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CurriculumDesign/sample/Controller/LogonController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CurriculumDesign/sample/Controller/ManageBookController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CurriculumDesign/sample/Controller/ManageBookController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CurriculumDesign/sample/Controller/ManageBorrowController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CurriculumDesign/sample/Controller/ManageBorrowController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CurriculumDesign/sample/Controller/ManageReaderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CurriculumDesign/sample/Controller/ManageReaderController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CurriculumDesign/sample/Controller/ReaderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CurriculumDesign/sample/Controller/ReaderController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CurriculumDesign/sample/Controller/ReturnController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CurriculumDesign/sample/Controller/ReturnController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CurriculumDesign/sample/Controller/SearchController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CurriculumDesign/sample/Controller/SearchController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CurriculumDesign/sample/View/Admin/ManageBookInfoView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CurriculumDesign/sample/View/Admin/ManageBookInfoView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CurriculumDesign/sample/View/Admin/ManageBorrowInfoView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CurriculumDesign/sample/View/Admin/ManageBorrowInfoView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CurriculumDesign/sample/View/Admin/ManageReaderInfoView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CurriculumDesign/sample/View/Admin/ManageReaderInfoView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CurriculumDesign/sample/View/LogonVIew.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CurriculumDesign/sample/View/LogonVIew.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CurriculumDesign/sample/View/Reader/ReaderView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CurriculumDesign/sample/View/Reader/ReaderView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CurriculumDesign/sample/View/Reader/ReturnView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CurriculumDesign/sample/View/Reader/ReturnView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CurriculumDesign/sample/View/Reader/SearchVIew.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CurriculumDesign/sample/View/Reader/SearchVIew.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CurriculumDesign/sample/Tool/Database.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CurriculumDesign/sample/Tool/Database.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/Controller/LogonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controller/LogonController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Controller/ManageBookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controller/ManageBookController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Controller/ManageBorrowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controller/ManageBorrowController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Controller/ManageReaderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controller/ManageReaderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Controller/ReaderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controller/ReaderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Controller/ReturnController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controller/ReturnController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/Controller/SearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controller/SearchController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/View/Admin/ManageBookInfoView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/View/Admin/ManageBookInfoView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/View/Admin/ManageBorrowInfoView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/View/Admin/ManageBorrowInfoView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/View/Admin/ManageReaderInfoView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/View/Admin/ManageReaderInfoView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/View/LogonVIew.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/View/LogonVIew.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/View/Reader/ReaderView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/View/Reader/ReaderView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/View/Reader/ReturnView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/View/Reader/ReturnView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Tool/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Tool/Database.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/View/Reader/SearchVIew.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/View/Reader/SearchVIew.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -109,12 +78,6 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1612" />
-    <option name="height" value="876" />
-  </component>
   <component name="ProjectId" id="1VEaazuANzrmB8HPbyYj7cP8uR8" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectReloadState">
@@ -277,26 +240,30 @@
       <screen x="0" y="23" width="1920" height="977" />
     </state>
     <state x="560" y="177" key="#Project_Structure/0.23.1920.977@0.23.1920.977" timestamp="1577105578663" />
-    <state x="773" y="228" key="#com.intellij.ide.util.MemberChooser" timestamp="1577156249055">
+    <state x="773" y="228" key="#com.intellij.ide.util.MemberChooser" timestamp="1577520896846">
       <screen x="0" y="23" width="1920" height="977" />
     </state>
-    <state x="773" y="228" key="#com.intellij.ide.util.MemberChooser/0.23.1920.977@0.23.1920.977" timestamp="1577156249055" />
-    <state width="1878" height="263" key="GridCell.Tab.0.bottom" timestamp="1577157253242">
+    <state x="773" y="228" key="#com.intellij.ide.util.MemberChooser/0.23.1920.977@0.23.1920.977" timestamp="1577520896846" />
+    <state x="585" y="114" key="CommitChangelistDialog2" timestamp="1577522858737">
       <screen x="0" y="23" width="1920" height="977" />
     </state>
-    <state width="1878" height="263" key="GridCell.Tab.0.bottom/0.23.1920.977@0.23.1920.977" timestamp="1577157253242" />
-    <state width="1878" height="263" key="GridCell.Tab.0.center" timestamp="1577157253241">
+    <state x="585" y="114" key="CommitChangelistDialog2/0.23.1920.977@0.23.1920.977" timestamp="1577522858737" />
+    <state width="1878" height="263" key="GridCell.Tab.0.bottom" timestamp="1577522782722">
       <screen x="0" y="23" width="1920" height="977" />
     </state>
-    <state width="1878" height="263" key="GridCell.Tab.0.center/0.23.1920.977@0.23.1920.977" timestamp="1577157253241" />
-    <state width="1878" height="263" key="GridCell.Tab.0.left" timestamp="1577157253241">
+    <state width="1878" height="263" key="GridCell.Tab.0.bottom/0.23.1920.977@0.23.1920.977" timestamp="1577522782722" />
+    <state width="1878" height="263" key="GridCell.Tab.0.center" timestamp="1577522782721">
       <screen x="0" y="23" width="1920" height="977" />
     </state>
-    <state width="1878" height="263" key="GridCell.Tab.0.left/0.23.1920.977@0.23.1920.977" timestamp="1577157253241" />
-    <state width="1878" height="263" key="GridCell.Tab.0.right" timestamp="1577157253242">
+    <state width="1878" height="263" key="GridCell.Tab.0.center/0.23.1920.977@0.23.1920.977" timestamp="1577522782721" />
+    <state width="1878" height="263" key="GridCell.Tab.0.left" timestamp="1577522782720">
       <screen x="0" y="23" width="1920" height="977" />
     </state>
-    <state width="1878" height="263" key="GridCell.Tab.0.right/0.23.1920.977@0.23.1920.977" timestamp="1577157253242" />
+    <state width="1878" height="263" key="GridCell.Tab.0.left/0.23.1920.977@0.23.1920.977" timestamp="1577522782720" />
+    <state width="1878" height="263" key="GridCell.Tab.0.right" timestamp="1577522782721">
+      <screen x="0" y="23" width="1920" height="977" />
+    </state>
+    <state width="1878" height="263" key="GridCell.Tab.0.right/0.23.1920.977@0.23.1920.977" timestamp="1577522782721" />
     <state x="653" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1576820784313">
       <screen x="0" y="23" width="1920" height="977" />
     </state>
@@ -305,9 +272,9 @@
       <screen x="0" y="23" width="1920" height="977" />
     </state>
     <state x="389" y="215" key="new project wizard/0.23.1920.977@0.23.1920.977" timestamp="1577107798970" />
-    <state x="625" y="238" width="670" height="676" key="search.everywhere.popup" timestamp="1577104554104">
+    <state x="625" y="238" width="670" height="676" key="search.everywhere.popup" timestamp="1577520864100">
       <screen x="0" y="23" width="1920" height="977" />
     </state>
-    <state x="625" y="238" width="670" height="676" key="search.everywhere.popup/0.23.1920.977@0.23.1920.977" timestamp="1577104554104" />
+    <state x="625" y="238" width="670" height="676" key="search.everywhere.popup/0.23.1920.977@0.23.1920.977" timestamp="1577520864100" />
   </component>
 </project>

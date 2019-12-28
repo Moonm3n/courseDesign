@@ -45,6 +45,7 @@ public class Main extends Application {
         logonController.setStage(primaryStage);
         logonController.setAdminScene(adminView.getScene());
         logonController.setReaderScene(readerView.getScene());
+        logonController.setSearchView(searchView);
 
         ReaderController readerController = readerView.getFxmlLoader().<ReaderController>getController();
         readerController.setStage(primaryStage);
