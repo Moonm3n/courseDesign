@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.AdminController">
+   <children>
+      <Button fx:id="bookInfoButton" layoutX="252.0" layoutY="105.0" mnemonicParsing="false" onAction="#bookInfo" text="图书信息管理" />
+      <Button fx:id="borrowInfoButton" layoutX="252.0" layoutY="184.0" mnemonicParsing="false" onAction="#borrowInfo" text="录入借阅信息" />
+      <Button fx:id="readerInfoButton" layoutX="252.0" layoutY="266.0" mnemonicParsing="false" onAction="#readerInfo" text="用户信息管理" />
+      <Label layoutX="267.0" layoutY="45.0" text="你好管理员" textAlignment="CENTER" />
+   </children>
+</AnchorPane>
