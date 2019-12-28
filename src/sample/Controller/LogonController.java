@@ -27,7 +27,7 @@ public class LogonController {
     private ImageView background, words;
 
     private Scene adminScene, readerScene;
-    private FXMLClass searchView;
+    private FXMLClass searchView, returnView, readerView;
     private Stage stage;
 
 
@@ -42,6 +42,8 @@ public class LogonController {
             System.out.println(reader.getString("password"));
             if(reader.getString("reader_id").equals(usernameTextField.getText()) && reader.getString("password").equals(passwdTextField.getText()) ){
                 searchView.getFxmlLoader().<SearchController>getController().setReader_id(usernameTextField.getText());
+                returnView.getFxmlLoader().<ReturnController>getController().setReader_id(usernameTextField.getText());
+                readerView.getFxmlLoader().<ReaderController>getController().setReader_id(usernameTextField.getText());
                 stage.setScene(readerScene);
                 readerDatebase.close();
                 return;
@@ -107,5 +109,21 @@ public class LogonController {
 
     public void setSearchView(FXMLClass searchView) {
         this.searchView = searchView;
+    }
+
+    public FXMLClass getReturnView() {
+        return returnView;
+    }
+
+    public void setReturnView(FXMLClass returnView) {
+        this.returnView = returnView;
+    }
+
+    public FXMLClass getReaderView() {
+        return readerView;
+    }
+
+    public void setReaderView(FXMLClass readerView) {
+        this.readerView = readerView;
     }
 }
