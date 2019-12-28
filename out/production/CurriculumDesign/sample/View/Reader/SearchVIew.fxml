@@ -14,13 +14,13 @@
       <TextField fx:id="searchTextField" layoutX="199.0" layoutY="61.0" prefHeight="26.0" prefWidth="200.0" />
       <Button fx:id="searchButton" layoutX="430.0" layoutY="58.0" mnemonicParsing="false" onAction="#search" text="查询" />
       <Label layoutX="199.0" layoutY="22.0" text="请输入书名、作者名或索书号查询" />
-      <GridPane layoutX="50.0" layoutY="112.0" prefHeight="150.0" prefWidth="478.0">
+      <GridPane layoutX="50.0" layoutY="112.0" prefHeight="150.0" prefWidth="521.0">
         <columnConstraints>
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="141.0" minWidth="10.0" prefWidth="119.0" />
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="96.0" minWidth="10.0" prefWidth="60.0" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="76.0" minWidth="10.0" prefWidth="69.0" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="102.0" minWidth="10.0" prefWidth="76.0" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="105.0" minWidth="10.0" prefWidth="102.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="141.0" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="98.0" minWidth="10.0" prefWidth="98.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="152.0" minWidth="10.0" prefWidth="108.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="115.0" minWidth="10.0" prefWidth="73.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="105.0" minWidth="10.0" prefWidth="83.0" />
             <ColumnConstraints hgrow="SOMETIMES" maxWidth="181.0" minWidth="10.0" prefWidth="55.0" />
         </columnConstraints>
         <rowConstraints>
@@ -36,30 +36,30 @@
             <Label text="出版社" GridPane.columnIndex="2" />
             <Label text="馆藏数量" GridPane.columnIndex="3" />
             <Label text="馆内位置" GridPane.columnIndex="4" />
-            <CheckBox fx:id="checkBox1" mnemonicParsing="false" GridPane.columnIndex="5" GridPane.rowIndex="1" />
-            <CheckBox fx:id="checkBox2" mnemonicParsing="false" GridPane.columnIndex="5" GridPane.rowIndex="2" />
-            <CheckBox fx:id="checkBox3" mnemonicParsing="false" GridPane.columnIndex="5" GridPane.rowIndex="3" />
-            <CheckBox fx:id="checkBox4" mnemonicParsing="false" GridPane.columnIndex="5" GridPane.rowIndex="4" />
-            <Label fx:id="bookName1" text="Label" GridPane.rowIndex="1" />
-            <Label fx:id="bookName2" text="Label" GridPane.rowIndex="2" />
-            <Label fx:id="bookName3" text="Label" GridPane.rowIndex="3" />
-            <Label fx:id="bookName4" text="Label" GridPane.rowIndex="4" />
-            <Label fx:id="author1" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <Label fx:id="author2" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <Label fx:id="author3" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <Label fx:id="author4" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-            <Label fx:id="publisher1" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-            <Label fx:id="publisher2" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-            <Label fx:id="publisher3" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-            <Label fx:id="publisher4" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-            <Label fx:id="bookNum1" text="Label" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-            <Label fx:id="bookNum2" text="Label" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-            <Label fx:id="bookNum3" text="Label" GridPane.columnIndex="3" GridPane.rowIndex="3" />
-            <Label fx:id="bookNum4" text="Label" GridPane.columnIndex="3" GridPane.rowIndex="4" />
-            <Label fx:id="location1" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="1" />
-            <Label fx:id="location2" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="2" />
-            <Label fx:id="location3" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="3" />
-            <Label fx:id="location4" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+            <CheckBox fx:id="checkBox1" mnemonicParsing="false" visible="false" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+            <CheckBox fx:id="checkBox2" mnemonicParsing="false" visible="false" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+            <CheckBox fx:id="checkBox3" mnemonicParsing="false" visible="false" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+            <CheckBox fx:id="checkBox4" mnemonicParsing="false" visible="false" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+            <Label fx:id="bookName1" GridPane.rowIndex="1" />
+            <Label fx:id="bookName2" GridPane.rowIndex="2" />
+            <Label fx:id="bookName3" GridPane.rowIndex="3" />
+            <Label fx:id="bookName4" GridPane.rowIndex="4" />
+            <Label fx:id="author1" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label fx:id="author2" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label fx:id="author3" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label fx:id="author4" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Label fx:id="publisher1" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Label fx:id="publisher2" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Label fx:id="publisher3" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <Label fx:id="publisher4" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <Label fx:id="bookNum1" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <Label fx:id="bookNum2" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <Label fx:id="bookNum3" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <Label fx:id="bookNum4" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+            <Label fx:id="location1" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+            <Label fx:id="location2" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+            <Label fx:id="location3" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+            <Label fx:id="location4" GridPane.columnIndex="4" GridPane.rowIndex="4" />
          </children>
       </GridPane>
       <Button fx:id="backButton" layoutX="523.0" layoutY="347.0" mnemonicParsing="false" onAction="#back" text="返回" />

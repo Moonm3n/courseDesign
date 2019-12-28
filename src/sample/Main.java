@@ -18,7 +18,7 @@ public class Main extends Application {
     private FXMLClass manageReaderInfoView;
     private FXMLClass readerView;
     private FXMLClass borrowView;
-    private FXMLClass retrunView;
+    private FXMLClass returnView;
     private FXMLClass searchView;
 
     @Override
@@ -33,7 +33,7 @@ public class Main extends Application {
         readerView = new FXMLClass("/sample/view/reader/ReaderView.fxml");
         borrowView = new FXMLClass("/sample/view/reader/BorrowView.fxml");
         searchView = new FXMLClass("/sample/view/reader/SearchView.fxml");
-        retrunView = new FXMLClass("/sample/view/reader/ReturnView.fxml");
+        returnView = new FXMLClass("/sample/view/reader/ReturnView.fxml");
 
     }
 
@@ -46,16 +46,20 @@ public class Main extends Application {
         logonController.setAdminScene(adminView.getScene());
         logonController.setReaderScene(readerView.getScene());
         logonController.setSearchView(searchView);
+        logonController.setReturnView(returnView);
+        logonController.setReaderView(readerView);
 
         ReaderController readerController = readerView.getFxmlLoader().<ReaderController>getController();
         readerController.setStage(primaryStage);
         readerController.setSearchBookScene(searchView.getScene());
-        readerController.setReturnBookScene(retrunView.getScene());
+        readerController.setReturnBookScene(returnView.getScene());
+        readerController.setReturnView(returnView);
+        readerController.setSearchView(searchView);
 
         searchView.getFxmlLoader().<SearchController>getController().setStage(primaryStage);
         searchView.getFxmlLoader().<SearchController>getController().setBackScene(readerView.getScene());
-        retrunView.getFxmlLoader().<ReturnController>getController().setStage(primaryStage);
-        retrunView.getFxmlLoader().<ReturnController>getController().setBackScene(readerView.getScene());
+        returnView.getFxmlLoader().<ReturnController>getController().setStage(primaryStage);
+        returnView.getFxmlLoader().<ReturnController>getController().setBackScene(readerView.getScene());
 
         AdminController adminController = adminView.getFxmlLoader().<AdminController>getController();
         adminController.setStage(primaryStage);
