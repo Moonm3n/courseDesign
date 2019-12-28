@@ -37,7 +37,6 @@ public class SearchController {
     private Scene backScene;
     private Stage stage;
     private String reader_id;
-
     private String[] book_id;
 
     public void search() throws SQLException {
@@ -110,23 +109,35 @@ public class SearchController {
             DateTimeFormatter formatter = DateTimeFormatter.ofPattern("YYYY-MM-dd HH:mm:ss");
             System.out.println(localDateTime.format(formatter));
             String borrowTime = localDateTime.format(formatter);
-            localDateTime.plusMonths(1);
+            localDateTime = localDateTime.plusMonths(1);
             String dueTime = localDateTime.format(formatter);
 
             if(checkBox1.isSelected()){
-                database.changeDatabase("INSERT INTO borrow_info ( book_id, reader_id, borrow_time, due_time ) VALUES ( \""+book_id[0]+"\",\""+reader_id + "\",\"" + borrowTime + "\",\"" + dueTime + "\")" );
+                database.changeDatabase("INSERT INTO borrow_info ( book_id, reader_id, status, borrow_time, due_time ) VALUES ( \""+book_id[0]+"\",\""+reader_id + "\",\"1\",\"" + borrowTime + "\",\"" + dueTime + "\")" );
+                database.connect();
+                database.changeDatabase("UPDATE book_info SET book_num=book_num-1 WHERE book_id='"+book_id[0]+"'");
+                bookNum1.setText(String.valueOf(Integer.parseInt(bookNum1.getText())-1));
                 checkBox1.setSelected(false);
             }
             if(checkBox2.isSelected()){
-                database.changeDatabase("INSERT INTO borrow_info ( book_id, reader_id, borrow_time, due_time ) VALUES ( \""+book_id[1]+"\",\""+reader_id + "\",\"" + borrowTime + "\",\"" + dueTime + "\")" );
+                database.changeDatabase("INSERT INTO borrow_info ( book_id, reader_id, status, borrow_time, due_time ) VALUES ( \""+book_id[1]+"\",\""+reader_id + "\",\"1\",\"" + borrowTime + "\",\"" + dueTime + "\")" );
+                database.connect();
+                database.changeDatabase("UPDATE book_info SET book_num=book_num-1 WHERE book_id='"+book_id[1]+"'");
+                bookNum2.setText(String.valueOf(Integer.parseInt(bookNum2.getText())-1));
                 checkBox2.setSelected(false);
             }
             if(checkBox3.isSelected()){
-                database.changeDatabase("INSERT INTO borrow_info ( book_id, reader_id, borrow_time, due_time ) VALUES ( \""+book_id[2]+"\",\""+reader_id + "\",\"" + borrowTime + "\",\"" + dueTime + "\")" );
+                database.changeDatabase("INSERT INTO borrow_info ( book_id, reader_id, status, borrow_time, due_time ) VALUES ( \""+book_id[2]+"\",\""+reader_id + "\",\"1\",\"" + borrowTime + "\",\"" + dueTime + "\")" );
+                database.connect();
+                database.changeDatabase("UPDATE book_info SET book_num=book_num-1 WHERE book_id='"+book_id[2]+"'");
+                bookNum3.setText(String.valueOf(Integer.parseInt(bookNum3.getText())-1));
                 checkBox3.setSelected(false);
             }
             if(checkBox4.isSelected()){
-                database.changeDatabase("INSERT INTO borrow_info ( book_id, reader_id, borrow_time, due_time ) VALUES ( \""+book_id[3]+"\",\""+reader_id + "\",\"" + borrowTime + "\",\"" + dueTime + "\")" );
+                database.changeDatabase("INSERT INTO borrow_info ( book_id, reader_id, status, borrow_time, due_time ) VALUES ( \""+book_id[3]+"\",\""+reader_id + "\",\"1\",\"" + borrowTime + "\",\"" + dueTime + "\")" );
+                database.connect();
+                database.changeDatabase("UPDATE book_info SET book_num=book_num-1 WHERE book_id='"+book_id[3]+"'");
+                bookNum4.setText(String.valueOf(Integer.parseInt(bookNum4.getText())-1));
                 checkBox4.setSelected(false);
             }
 
@@ -138,6 +149,41 @@ public class SearchController {
             root.getChildren().add(label);
             stage.setScene(new Scene(root, 200, 50));
             stage.showAndWait();
+        }
+
+    }
+
+    public void clear(){
+        searchTextField.setText("");
+        Label[] bookNames = {bookName1, bookName2, bookName3, bookName4};
+        Label[] authors = {author1, author2, author3, author4};
+        Label[] publishers = {publisher1, publisher2, publisher3, publisher4};
+        Label[] locations = {location1, location2, location3, location4};
+        Label[] bookNums = {bookNum1, bookNum2, bookNum3, bookNum4};
+        CheckBox[] checkBoxes = {checkBox1, checkBox2, checkBox3, checkBox4};
+        for (Label label:
+             bookNames) {
+            label.setText("");
+        }
+        for (Label label:
+                authors) {
+            label.setText("");
+        }
+        for (Label label:
+                publishers) {
+            label.setText("");
+        }
+        for (Label label:
+                locations) {
+            label.setText("");
+        }
+        for (Label label:
+                bookNums) {
+            label.setText("");
+        }
+        for (CheckBox checkBox:
+             checkBoxes) {
+            checkBox.setSelected(false);
         }
 
     }
