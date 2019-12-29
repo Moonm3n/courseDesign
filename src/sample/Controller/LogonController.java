@@ -4,6 +4,7 @@ import javafx.fxml.FXML;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -23,11 +24,13 @@ import java.sql.SQLException;
 public class LogonController {
 
     @FXML
-    private TextField usernameTextField, passwdTextField;
+    private TextField usernameTextField;
     @FXML
     private Button logonButton;
     @FXML
     private ImageView background, words;
+    @FXML
+    private PasswordField passwordField;
 
     private Scene adminScene, readerScene;
     private FXMLClass searchView, returnView, readerView;
@@ -42,16 +45,19 @@ public class LogonController {
         if (reader != null) {
             System.out.println(reader.getReaderId());
             System.out.println(reader.getPassword());
-            if (reader.getPassword().equals(passwdTextField.getText())) {
+            if (reader.getPassword().equals(passwordField.getText())) {
                 System.out.println("sss");
                 stage.setScene(readerScene);
+                readerView.getFxmlLoader().<ReaderController>getController().setReader_id(usernameTextField.getText());
+                returnView.getFxmlLoader().<ReturnController>getController().setReader_id(usernameTextField.getText());
+                searchView.getFxmlLoader().<SearchController>getController().setReader_id(usernameTextField.getText());
                 return;
             }
         }
 
 
         Admin admin1 = JDBCDao.selectOne("select * from administor where administor_id = '" + usernameTextField.getText() + "'", Admin.class);
-        if (admin1 != null && admin1.getPassword().equals(passwdTextField.getText())) {
+        if (admin1 != null && admin1.getPassword().equals(passwordField.getText())) {
             System.out.println("admin login success");
             stage.setScene(adminScene);
             return;
