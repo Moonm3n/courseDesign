@@ -12,7 +12,7 @@ public class Database {
 
     public Database(String databaseName) throws SQLException {
         this.databaseName = databaseName;
-        this.connection = DriverManager.getConnection("jdbc:mysql://111.229.81.171:3306/"+databaseName, "system", "S?639sss639?S");
+        this.connection = DriverManager.getConnection("jdbc:mysql://111.229.81.171:3306/"+databaseName+"?useUnicode=true&amp&characterEncoding=utf-8", "system", "S?639sss639?S");
         this.statement = connection.createStatement();
     }
 
@@ -29,7 +29,7 @@ public class Database {
     }
 
     public void connect() throws SQLException {
-        this.connection = DriverManager.getConnection("jdbc:mysql://111.229.81.171:3306/"+databaseName, "system", "S?639sss639?S");
+        this.connection = DriverManager.getConnection("jdbc:mysql://111.229.81.171:3306/"+databaseName+"?useUnicode=true&amp&characterEncoding=utf-8", "system", "S?639sss639?S");
         this.statement = connection.createStatement();
     }
 
@@ -39,8 +39,12 @@ public class Database {
     }
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException {
+        Database database = new Database("book_management");
+        database.changeDatabase("INSERT INTO `reader` VALUES ('2018091613005', '影流之主', 2, '123456', '2018-09-01 10:00:00.000000', '2019-06-30 10:00:01.000000');");
         //changeDatabase()
     }
+
+
 
 }
