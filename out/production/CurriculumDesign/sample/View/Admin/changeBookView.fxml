@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.ChangeBookController">
+<AnchorPane prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.ChangeBookController">
    <children>
-      <Label layoutX="63.0" layoutY="40.0" text="新的书籍名称" />
-      <Label layoutX="264.0" layoutY="40.0" text="新的作者" />
+      <Label layoutX="69.0" layoutY="39.0" text="图书ID" />
+      <Label layoutX="264.0" layoutY="252.0" text="新的作者" />
       <Label layoutX="258.0" layoutY="147.0" text="新的出版社" />
       <Label layoutX="76.0" layoutY="147.0" text="新的数量" />
       <Label layoutX="63.0" layoutY="259.0" text="新的馆藏位置" />
-      <TextField fx:id="bookNameTextField" layoutX="27.0" layoutY="77.0" />
-      <TextField fx:id="authorTextField" layoutX="215.0" layoutY="77.0" />
+      <TextField fx:id="bookIdTextField" disable="true" layoutX="24.0" layoutY="77.0" />
+      <TextField fx:id="bookNameTextField" layoutX="208.0" layoutY="77.0" />
+      <TextField fx:id="authorTextField" layoutX="208.0" layoutY="304.0" />
       <TextField fx:id="bookNumTextField" layoutX="23.0" layoutY="187.0" />
       <TextField fx:id="publisherTextField" layoutX="211.0" layoutY="187.0" />
       <TextField fx:id="locationTextField" layoutX="23.0" layoutY="304.0" />
-      <Button fx:id="yesButton" layoutX="260.0" layoutY="246.0" mnemonicParsing="false" onAction="#yes" text="确认" />
-      <Button fx:id="NoButton" layoutX="260.0" layoutY="304.0" mnemonicParsing="false" onAction="#no" text="取消" />
+      <Button fx:id="yesButton" layoutX="104.0" layoutY="351.0" mnemonicParsing="false" onAction="#yes" text="确认" />
+      <Button fx:id="NoButton" layoutX="260.0" layoutY="351.0" mnemonicParsing="false" onAction="#no" text="取消" />
+      <Label layoutX="253.0" layoutY="39.0" text="新的书籍名称" />
    </children>
 </AnchorPane>
