@@ -10,8 +10,11 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
+import sample.Model.Admin;
 import sample.Model.FXMLClass;
+import sample.Model.Reader;
 import sample.Tool.Database;
+import sample.Tool.JDBCDao;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -35,33 +38,23 @@ public class LogonController {
     @FXML
     public void logon() throws SQLException { //在数据库中检索是否存在符合的账户，是则切换页面，否则弹出提示信息
 
-        Database readerDatebase = new Database("book_management");
-        ResultSet reader = readerDatebase.searchDatabase("select * from reader");
-        while(reader.next()){
-            System.out.println(reader.getString("reader_id"));
-            System.out.println(reader.getString("password"));
-            if(reader.getString("reader_id").equals(usernameTextField.getText()) && reader.getString("password").equals(passwdTextField.getText()) ){
-                searchView.getFxmlLoader().<SearchController>getController().setReader_id(usernameTextField.getText());
-                returnView.getFxmlLoader().<ReturnController>getController().setReader_id(usernameTextField.getText());
-                readerView.getFxmlLoader().<ReaderController>getController().setReader_id(usernameTextField.getText());
+        Reader reader = JDBCDao.selectOne("select * from reader where reader_id = '" + usernameTextField.getText() + "'", Reader.class);
+        if (reader != null) {
+            System.out.println(reader.getReaderId());
+            System.out.println(reader.getPassword());
+            if (reader.getPassword().equals(passwdTextField.getText())) {
+                System.out.println("sss");
                 stage.setScene(readerScene);
-                readerDatebase.close();
                 return;
             }
         }
 
 
-        Database adminDatabase = new Database("book_management");
-        ResultSet admin = adminDatabase.searchDatabase("select * from administor");
-        while(admin.next()){
-            System.out.println(admin.getString("administor_id"));
-            System.out.println(admin.getString("password"));
-            if(admin.getString("administor_id").equals(usernameTextField.getText()) && admin.getString("password").equals(passwdTextField.getText()) ){
-                System.out.println("sss");
-                stage.setScene(adminScene);
-                adminDatabase.close();
-                return;
-            }
+        Admin admin1 = JDBCDao.selectOne("select * from administor where administor_id = '" + usernameTextField.getText() + "'", Admin.class);
+        if (admin1 != null && admin1.getPassword().equals(passwdTextField.getText())) {
+            System.out.println("admin login success");
+            stage.setScene(adminScene);
+            return;
         }
 
         AnchorPane root = new AnchorPane();
@@ -74,7 +67,6 @@ public class LogonController {
         Stage stage = new Stage();
         stage.setScene(new Scene(root, 200, 50));
         stage.showAndWait();
-
 
 
     }

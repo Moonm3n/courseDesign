@@ -1,8 +1,5 @@
 package sample.Tool;
 
-import com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BIConversion;
-
-import java.net.URL;
 import java.sql.*;
 
 public class Database {

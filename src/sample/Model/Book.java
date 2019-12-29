@@ -2,15 +2,18 @@ package sample.Model;
 
 public class Book {
     private String bookName;
-    private String bookID;
+    private String bookId;
     private String author;
     private String publisher;
     private int bookNum;
     private String location;
 
-    public Book(String bookName, String bookID, String author, String publisher, int bookNum, String location) {
+    public Book() {
+    }
+
+    public Book(String bookName, String bookId, String author, String publisher, int bookNum, String location) {
         this.bookName = bookName;
-        this.bookID = bookID;
+        this.bookId = bookId;
         this.author = author;
         this.publisher = publisher;
         this.bookNum = bookNum;
@@ -25,12 +28,11 @@ public class Book {
         this.bookName = bookName;
     }
 
-    public String getBookID() {
-        return bookID;
+    public String getBookId() {
+        return bookId;
     }
-
-    public void setBookID(String bookID) {
-        this.bookID = bookID;
+    public void setBookId(String bookId) {
+        this.bookId = bookId;
     }
 
     public String getAuthor() {

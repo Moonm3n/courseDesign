@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.ChangeReaderController">
+   <children>
+      <Label layoutX="69.0" layoutY="39.0" text="读者ID" />
+      <Label layoutX="64.0" layoutY="116.0" text="读者密码" />
+      <TextField fx:id="readerIdTextField" disable="true" layoutX="24.0" layoutY="77.0" />
+      <TextField fx:id="readerNameTextField" layoutX="208.0" layoutY="77.0" />
+      <TextField fx:id="passwordTextField" layoutX="26.0" layoutY="143.0" />
+      <Button fx:id="yesButton" layoutX="112.0" layoutY="243.0" mnemonicParsing="false" onAction="#yes" text="确认" />
+      <Button fx:id="NoButton" layoutX="213.0" layoutY="243.0" mnemonicParsing="false" onAction="#no" text="取消" />
+      <Label layoutX="253.0" layoutY="39.0" text="读者姓名" />
+   </children>
+</AnchorPane>
